@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2630dd5b-e944-4b2e-bbd1-6417a4dda79d" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="171" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1irzAF0NIgd3MB71i8woHcpAFM9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="14" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="Application.menu">
+    <configuration name="Courses" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Courses" />
+      <module name="exercise_01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Users" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Users" />
+      <module name="exercise_01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="menu" />
+      <module name="exercise_01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.menu" />
+        <item itemvalue="Application.Courses" />
+        <item itemvalue="Application.Users" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2630dd5b-e944-4b2e-bbd1-6417a4dda79d" name="默认更改列表" comment="" />
+      <created>1602680352893</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602680352893</updated>
+      <workItem from="1602680356198" duration="1383000" />
+      <workItem from="1602749498108" duration="3227000" />
+      <workItem from="1602753436382" duration="2226000" />
+      <workItem from="1602759605348" duration="5184000" />
+      <workItem from="1602846922138" duration="4273000" />
+      <workItem from="1602852028141" duration="128000" />
+      <workItem from="1602893189392" duration="10888000" />
+      <workItem from="1602904197059" duration="368000" />
+      <workItem from="1602904590677" duration="536000" />
+      <workItem from="1603022835207" duration="839000" />
+      <workItem from="1603067425657" duration="6212000" />
+      <workItem from="1603105977190" duration="3906000" />
+      <workItem from="1603244446209" duration="6936000" />
+      <workItem from="1603251455871" duration="651000" />
+      <workItem from="1603263857706" duration="3955000" />
+      <workItem from="1603354804830" duration="177000" />
+      <workItem from="1603365575235" duration="5859000" />
+      <workItem from="1603375885402" duration="980000" />
+      <workItem from="1603446866606" duration="4559000" />
+      <workItem from="1603451491887" duration="37000" />
+      <workItem from="1603622271789" duration="4000" />
+      <workItem from="1603673127005" duration="1116000" />
+      <workItem from="1603675074260" duration="124000" />
+      <workItem from="1603714096015" duration="1162000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="367" y="42" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1603245270702">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="367" y="42" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1280.680@0.0.1280.680" timestamp="1603245270702" />
+    <state x="233" y="0" key="#项目结构" timestamp="1602680376408">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="0" key="#项目结构/0.0.1280.680@0.0.1280.680" timestamp="1602680376408" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1602904248850">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1602904248850" />
+    <state width="1238" height="161" key="GridCell.Tab.0.bottom" timestamp="1603715265138">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="161" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603715265138" />
+    <state width="1238" height="161" key="GridCell.Tab.0.center" timestamp="1603715265137">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="161" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603715265137" />
+    <state width="1238" height="161" key="GridCell.Tab.0.left" timestamp="1603715265137">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="161" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603715265137" />
+    <state width="1238" height="161" key="GridCell.Tab.0.right" timestamp="1603715265138">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="161" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603715265138" />
+    <state width="1238" height="204" key="GridCell.Tab.1.bottom" timestamp="1603674250243">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603674250243" />
+    <state width="1238" height="204" key="GridCell.Tab.1.center" timestamp="1603674250243">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1603674250243" />
+    <state width="1238" height="204" key="GridCell.Tab.1.left" timestamp="1603674250243">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1603674250243" />
+    <state width="1238" height="204" key="GridCell.Tab.1.right" timestamp="1603674250243">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1603674250243" />
+    <state x="7" y="0" key="new project wizard" timestamp="1603354825627">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="7" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1603354825627" />
+    <state x="299" y="152" key="run.anything.popup" timestamp="1603246878981">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="299" y="152" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1603246878981" />
+    <state x="308" y="7" width="672" height="678" key="search.everywhere.popup" timestamp="1603447028668">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="308" y="7" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603447028668" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/exercise_01/src/menu.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/homework_01$menu.ic" NAME="menu Coverage Results" MODIFIED="1603451396124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
