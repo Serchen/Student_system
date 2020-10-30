@@ -43,7 +43,9 @@ public class Courses {
             }
         }
         System.out.println("排序完成！");
-        menu.adminMenu();
+        Scanner sc = new Scanner(System.in);
+        if(sc.next().equals("y"))
+            menu.adminMenu();
     }
     public static void SearchCourseByTeacher(){
         System.out.println("请输入要查找的老师名称");
@@ -66,7 +68,8 @@ public class Courses {
                 course.teacher = sc.next();
             }
         }
-        menu.adminMenu();
+        if(sc.next().equals("y"))
+            menu.adminMenu();
     }
 
     public static void DeleteCourse(){

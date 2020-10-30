@@ -3,8 +3,8 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class Users {
-    static Vector<Student> studentList = new Vector<Student>();
-    static Vector<Teacher> teacherList = new Vector<Teacher>();
+    static Vector<Student> studentList = new Vector<>();
+    static Vector<Teacher> teacherList = new Vector<>();
 
     public Users(){
 
@@ -12,28 +12,35 @@ public class Users {
 
     public static void showStudentList(){
         System.out.println("学生姓名   学号   所在班级");
-        for(int i=0; i<studentList.size(); i++){
-            System.out.println(studentList.get(i).name+"  "+studentList.get(i).stu_id+"  "+studentList.get(i).Class);
+        for (Student student : studentList) {
+            System.out.println(student.name + "  " + student.stu_id + "  " + student.Class);
         }
-        menu.adminMenu();
+        Scanner sc = new Scanner(System.in);
+        if(sc.next().equals("y"))
+            menu.adminMenu();
     }
 
     public static void showTeacherList(){
         System.out.println("教师姓名  工号  教师职位");
-        for(int i=0; i<teacherList.size(); i++){
-            System.out.println(teacherList.get(i).name+"  "+teacherList.get(i).work_id+"  "+teacherList.get(i).level);
+        for (Teacher teacher : teacherList) {
+            System.out.println(teacher.name + "  " + teacher.work_id + "  " + teacher.level);
         }
-        menu.adminMenu();
+        Scanner sc = new Scanner(System.in);
+        if(sc.next().equals("y"))
+            menu.adminMenu();
     }
 
     public static void clearPassword(){
-        for(int i=0; i<studentList.size(); i++) {
-            studentList.get(i).newPassword();
+        for (Student student : studentList) {
+            student.newPassword();
         }
-        for(int i=0; i<teacherList.size(); i++){
-            teacherList.get(i).newPassword();
+        for (Teacher teacher : teacherList) {
+            teacher.newPassword();
         }
-        menu.adminMenu();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("密码初始化成功！");
+        if(sc.next().equals("y"))
+            menu.adminMenu();
     }
 
     public static void deleteTeacherAndStudent(){
@@ -96,24 +103,25 @@ public class Users {
             studentList.add(new Student(name, "123456", id, class_num));
             System.out.println("录入学生信息成功！");
         }
-        menu.adminMenu();
+        if(sc.next().equals("y"))
+            menu.adminMenu();
     }
 
-    public static void showStudents(){
-        System.out.println("学生姓名  所在班级  学号");
-        for(int i=0; i<studentList.size(); i++){
-            System.out.println(studentList.get(i).name+"  "+studentList.get(i).Class+"  "
-                    +studentList.get(i).stu_id);
-        }
-    }
-
-    public static void showTeachers(){
-        System.out.println("教师姓名  职位  工号");
-        for(int i=0; i<teacherList.size(); i++){
-            System.out.println(teacherList.get(i).name+"  "+teacherList.get(i).level+"  "
-                    +teacherList.get(i).work_id);
-        }
-    }
+//    public static void showStudents(){
+//        System.out.println("学生姓名  所在班级  学号");
+//        for (Student student : studentList) {
+//            System.out.println(student.name + "  " + student.Class + "  "
+//                    + student.stu_id);
+//        }
+//    }
+//
+//    public static void showTeachers(){
+//        System.out.println("教师姓名  职位  工号");
+//        for (Teacher teacher : teacherList) {
+//            System.out.println(teacher.name + "  " + teacher.level + "  "
+//                    + teacher.work_id);
+//        }
+//    }
 
     public static void saveStudents(){
         File file = new File("C:\\Users\\Chen Yining\\IdeaProjects\\homework_01\\exercise_01\\src\\Students.txt");
@@ -155,7 +163,7 @@ public class Users {
         try{
             BufferedReader bw = new BufferedReader(new InputStreamReader
                     (new FileInputStream("C:\\Users\\Chen Yining\\IdeaProjects\\homework_01\\exercise_01\\src\\Teachers.txt")));
-            String data = null;
+            String data;
             while((data = bw.readLine()) != null){
                 String[] ans = data.split(" ");
                 String name = ans[0];
@@ -175,7 +183,7 @@ public class Users {
         try{
             BufferedReader br = new BufferedReader(new InputStreamReader
                     (new FileInputStream("C:\\Users\\Chen Yining\\IdeaProjects\\homework_01\\exercise_01\\src\\Students.txt")));
-            String data = null;
+            String data;
             while((data = br.readLine()) != null){
                 String[] ans = data.split(" ");
                 String name = ans[0];

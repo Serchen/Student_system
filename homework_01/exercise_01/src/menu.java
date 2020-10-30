@@ -8,7 +8,31 @@ public class menu {
         Users.readTeachers();
         Courses.readCourses();
         Courses.readRecords();
-        mainMenu();
+        System.out.println(" ......................阿弥陀佛......................\n"+
+                "                       _oo0oo_                      \n"+
+                "                      o8888888o                     \n"+
+                "                      88\" . \"88                     \n"+
+                "                      (| -_- |)                     \n"+
+                "                      0\\  =  /0                     \n"+
+                "                   ___/‘---’\\___                   \n"+
+                "                  .' \\|       |/ '.                 \n"+
+                "                 / \\\\|||  :  |||// \\                \n"+
+                "                / _||||| -卍-|||||_ \\               \n"+
+                "               |   | \\\\\\  -  /// |   |              \n"+
+                "               | \\_|  ''\\---/''  |_/ |              \n"+
+                "               \\  .-\\__  '-'  ___/-. /              \n"+
+                "             ___'. .'  /--.--\\  '. .'___            \n"+
+                "         .\"\" ‘<  ‘.___\\_<|>_/___.’>’ \"\".          \n"+
+                "       | | :  ‘- \\‘.;‘\\ _ /’;.’/ - ’ : | |        \n"+
+                "         \\  \\ ‘_.   \\_ __\\ /__ _/   .-’ /  /        \n"+
+                "    =====‘-.____‘.___ \\_____/___.-’___.-’=====     \n"+
+                "                       ‘=---=’                      \n"+
+                "                                                    \n"+
+                "....................佛祖保佑 ,永无BUG..................\n"+
+                ".................年轻人，渴望力量请输入y.................");
+        Scanner sc = new Scanner(System.in);
+        if(sc.next().equals("y"))
+            mainMenu();
         Courses.saveCourses();
         Users.saveTeachers();
         Users.saveStudents();
@@ -63,7 +87,6 @@ public class menu {
                 Users.deleteTeacherAndStudent();
                 break;
             case 11:
-                return;
         }
     }
 
@@ -87,39 +110,61 @@ public class menu {
                 Users.teacherList.get(ans).SetPassWord();
                 break;
             case 2:
-                System.out.println("该教师所授的课程为：");
-                System.out.println("课程名称  课程类型  老师姓名  上课人数  课程编号");
+                int flag = 0;
                 for(int i = 0; i<Courses.courseList.size(); i++){
                     if(Courses.courseList.get(i).teacher.equals(Users.teacherList.get(ans).name)){
-                        System.out.println(Courses.courseList.get(i).name+"   "
-                                +Courses.courseList.get(i).type+"   "
-                                +Courses.courseList.get(i).teacher+"   "
-                                +Courses.courseList.get(i).stuNum +"   "
-                                +Courses.courseList.get(i).id);
+                        flag = 1;
+                        break;
+                    }
+                }
+                if(flag == 0)
+                    System.out.println("该教师没有所授课程！");
+                else{
+                    System.out.println("该教师所授的课程为：");
+                    System.out.println("课程名称  课程类型  老师姓名  上课人数  课程编号");
+                    for(int i = 0; i<Courses.courseList.size(); i++){
+                        if(Courses.courseList.get(i).teacher.equals(Users.teacherList.get(ans).name)){
+                            System.out.println(Courses.courseList.get(i).name+"   "
+                                    +Courses.courseList.get(i).type+"   "
+                                    +Courses.courseList.get(i).teacher+"   "
+                                    +Courses.courseList.get(i).stuNum +"   "
+                                    +Courses.courseList.get(i).id);
+                        }
                     }
                 }
                 break;
             case 3:
-                System.out.println("所授课程的学生名单如下：");
                 String teacherName = null;
                 for(int i=0; i<Users.teacherList.size(); i++){
                     if(Users.teacherList.get(i).work_id == id){
                         teacherName = Users.teacherList.get(i).name;
                     }
                 }
+                int tmp = 0;
                 for(int i = 0; i<Courses.courseList.size(); i++){
                     if(Courses.courseList.get(i).teacher.equals(teacherName)){
-                        System.out.println("课程名称：");
-                        System.out.println(Courses.courseList.get(i).name);
-                        System.out.println("学生姓名：");
-                        for(int j = 0; j<Courses.courseList.get(i).stuRecords.size(); j++){
-                            System.out.println(Courses.courseList.get(i).stuRecords.get(j));
+                        tmp = 1;
+                        break;
+                    }
+                }
+                if(tmp == 0){
+                    System.out.println("该教师没有学生！");
+                }
+                else{
+                    System.out.println("所授课程的学生名单如下：");
+                    for(int i = 0; i<Courses.courseList.size(); i++){
+                        if(Courses.courseList.get(i).teacher.equals(teacherName)){
+                            System.out.println("课程名称：");
+                            System.out.println(Courses.courseList.get(i).name);
+                            System.out.println("学生姓名：");
+                            for(int j = 0; j<Courses.courseList.get(i).stuRecords.size(); j++){
+                                System.out.println(Courses.courseList.get(i).stuRecords.get(j));
+                            }
                         }
                     }
                 }
                 break;
             case 4:
-                return;
         }
     }
 
@@ -143,14 +188,32 @@ public class menu {
                 Users.studentList.get(ans).SetPassWord();
                 break;
             case 2:
-                System.out.println("个人所选课程如下：");
+                int flag = 0;
                 for(int i = 0; i<Courses.courseList.size(); i++){
                     for(int j = 0; j<Courses.courseList.get(i).stuRecords.size(); j++){
                         if(Courses.courseList.get(i).stuRecords.get(j).equals(Users.studentList.get(ans).name)){
-                            System.out.println(Courses.courseList.get(i).name);
+                            flag = 1;
+                            break;
                         }
                     }
                 }
+                if(flag == 0){
+                    System.out.println("该学生没有选修课程！");
+                    menu.mainMenu();
+                }
+                else{
+                    System.out.println("个人所选课程如下：");
+                    for(int i = 0; i<Courses.courseList.size(); i++){
+                        for(int j = 0; j<Courses.courseList.get(i).stuRecords.size(); j++){
+                            if(Courses.courseList.get(i).stuRecords.get(j).equals(Users.studentList.get(ans).name)){
+                                System.out.println(Courses.courseList.get(i).name);
+                            }
+                        }
+                    }
+                }
+                Scanner sc = new Scanner(System.in);
+                if(sc.next().equals("y"))
+                    menu.adminMenu();
                 break;
             case 3:
                 System.out.println("可选择的选修课课程如下：");
@@ -160,18 +223,18 @@ public class menu {
                         System.out.println(Courses.courseList.get(i).id);
                     }
                 }
-                System.out.println("请输入您的选择号码：");
+                System.out.println("请输入您所选课程对应编号：");
                 int n = in.nextInt();
                 for(int i = 0; i<Courses.courseList.size(); i++){
-                    System.out.println(i+" "+ans);
                     if(Courses.courseList.get(i).id == n){
                         Courses.courseList.get(i).stuRecords.add(Users.studentList.get(ans).name);
                     }
                 }
                 System.out.println("选择成功！");
+                if(in.next().equals("y"))
+                    menu.adminMenu();
                 break;
             case 4:
-                return;
 
         }
     }
@@ -179,11 +242,17 @@ public class menu {
     public static void mainMenu() {
         Scanner sc = new Scanner(System.in);
         while (true) {
-            System.out.println("*****请选择登录方式*****");
-            System.out.println("*****1、管理员登录 *****");
-            System.out.println("*****2、教师登录  *****");
-            System.out.println("*****3、学生登录  *****");
-            System.out.println("*****4、退出系统 *****");
+            System.out.println("**************************\n"
+                                +"**************************\n"
+                                +"**************************");
+            System.out.println("********请选择登录方式********");
+            System.out.println("********1、管理员登录 ********");
+            System.out.println("********2、教师登录  ********");
+            System.out.println("********3、学生登录  ********");
+            System.out.println("********4、退出系统  ********");
+            System.out.println("**************************\n"
+                    +"**************************\n"
+                    +"**************************");
             System.out.println("请输入你的选择序号：");
             int c = sc.nextInt();
             if (c == 1) {
@@ -195,6 +264,17 @@ public class menu {
             } else if (c == 2) {
                 System.out.println("请输入您的工号：");
                 int id = sc.nextInt();
+                int flag = 0;
+                for(int i=0; i<Users.teacherList.size(); i++){
+                    if(Users.teacherList.get(i).work_id == id){
+                        flag = 1;
+                        break;
+                    }
+                }
+                if(flag == 0){
+                    System.out.println("您输入的工号不存在!");
+                    mainMenu();
+                }
                 System.out.println("请输入您的密码：");
                 String pass = sc.next();
                 for(Teacher teacher : Users.teacherList){
@@ -211,6 +291,17 @@ public class menu {
             } else if (c == 3) {
                 System.out.println("请输入您的学号：");
                 int stu_ID = sc.nextInt();
+                int flag = 0;
+                for(Student stu : Users.studentList){
+                    if(stu.stu_id == stu_ID){
+                        flag = 1;
+                        break;
+                    }
+                }
+                if(flag == 0){
+                    System.out.println("您输入的学号不存在！");
+                    mainMenu();
+                }
                 System.out.println("请输入您的密码：");
                 String pass = sc.next();
                 for(Student student : Users.studentList){
